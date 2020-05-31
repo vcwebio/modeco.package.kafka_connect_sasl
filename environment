@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
-export CONTECO_LABEL="package.kafka_connect_tocloud - ModEco"
-export CONTECO_DESCRIPTION="Modeco Confluent Kafka Connect to cloud module package."
+export CONTECO_LABEL="package.kafka_connect_sasl - ModEco"
+export CONTECO_DESCRIPTION="Modeco Confluent Kafka Connect package, with SASL authentication."
 
 export CONTECO_TYPE="package"
-export CONTECO_NAME="kafka_connect_tocloud"
+export CONTECO_NAME="kafka_connect_sasl"
 export CONTECO_TAG="5.4.0"
 export CONTECO_TAG_TYPE="incremental"
 

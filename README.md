@@ -1,6 +1,6 @@
-# `package.kafka_connect_tocloud` - ModEco
+# `package.kafka_connect_sasl` - ModEco
 
-Modeco Confluent Kafka Connect to cloud module package.
+Modeco Confluent Kafka Connect package, with SASL authentication.
 See `conteco.docs.overview` for more information on the ModEco ecosystem.
 
 ## Structure

@@ -15,7 +15,7 @@ COPY ./ /conteco/repo/
 ENV CONTECO_REALM="vcwebio" \
     CONTECO_ECOSYSTEM="modeco" \
     CONTECO_TYPE="package" \
-    CONTECO_NAME="kafka_connect_tocloud" \
+    CONTECO_NAME="kafka_connect_sasl" \
     CONTECO_TAG="5.4.0" \
     CONTECO_BASE="image.wrapper" \
     CONTECO_BUILD="modeco"
@@ -23,11 +23,11 @@ LABEL io.vcweb.schema-version="1.0" \
       io.vcweb.realm="vcwebio" \
       io.vcweb.ecosystem="modeco" \
       io.vcweb.type="package" \
-      io.vcweb.name="kafka_connect_tocloud" \
+      io.vcweb.name="kafka_connect_sasl" \
       io.vcweb.tag="5.4.0" \
       io.vcweb.base="image.wrapper" \
       io.vcweb.build="modeco" \
-      io.vcweb.label="package.kafka_connect_tocloud - ModEco" \
-      io.vcweb.description="Modeco Confluent Kafka Connect to cloud module package." \
-      io.vcweb.docker.cmd.help="docker run vcwebio/modeco.package.kafka_connect_tocloud --help"
+      io.vcweb.label="package.kafka_connect_sasl - ModEco" \
+      io.vcweb.description="Modeco Confluent Kafka Connect package, with SASL authentication." \
+      io.vcweb.docker.cmd.help="docker run vcwebio/modeco.package.kafka_connect_sasl --help"
 ##### END modeco/Dockerfile/env-labels-footer #####
