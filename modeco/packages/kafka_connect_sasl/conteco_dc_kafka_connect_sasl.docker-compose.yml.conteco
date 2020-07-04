@@ -12,19 +12,14 @@ services:
     networks: [${CONTECO_NETWORKLOCAL}_overlay]
     deploy:
       mode: replicated
-      ${CONTECO_DC_KAFKA_CONNECT_SASL_DEPLOY_MODE_REPLICATED_REPLICAS}
       resources:
         limits:
-          cpus: '${CONTECO_DC_KAFKA_CONNECT_SASL_DEPLOY_RESOURCES_LIMITS_CPUS}'
           memory: '${CONTECO_DC_KAFKA_CONNECT_SASL_DEPLOY_RESOURCES_LIMITS_MEMORY}'
         reservations:
-          cpus: '${CONTECO_DC_KAFKA_CONNECT_SASL_DEPLOY_RESOURCES_RESERVATIONS_CPUS}'
           memory: '${CONTECO_DC_KAFKA_CONNECT_SASL_DEPLOY_RESOURCES_RESERVATIONS_MEMORY}'
-      placement:
-        constraints: [${CONTECO_DC_KAFKA_CONNECT_SASL_DEPLOY_PLACEMENT_CONSTRAINTS}]
-      labels: [${CONTECO_DC_KAFKA_CONNECT_SASL_DEPLOY_LABELS}]
-    labels: [${CONTECO_DC_KAFKA_CONNECT_SASL_LABELS}]
+${CONTECO_DC_KAFKA_CONNECT_SASL_COMPOSE_EXTENSIONS}
 # END SERVICE kafka_connect.sasl
 
-volumes: {${CONTECO_STACKPREFIX}_kafka_connect_connect_secrets_volume: { external: true },${CONTECO_STACKPREFIX}_kafka_connect_secrets_volume: { external: true },${CONTECO_STACKPREFIX}_kafka_connect_data_volume: { external: true },${CONTECO_STACKPREFIX}_kafka_connect_jars_volume: { external: true }}
 networks: {${CONTECO_NETWORKLOCAL}_overlay: { external: true }}
+volumes: {${CONTECO_STACKPREFIX}_kafka_connect_connect_secrets_volume: { external: true },${CONTECO_STACKPREFIX}_kafka_connect_secrets_volume: { external: true },${CONTECO_STACKPREFIX}_kafka_connect_data_volume: { external: true },${CONTECO_STACKPREFIX}_kafka_connect_jars_volume: { external: true }}
+${CONTECO_DC_GLOBAL_COMPOSE_EXTENSIONS}
