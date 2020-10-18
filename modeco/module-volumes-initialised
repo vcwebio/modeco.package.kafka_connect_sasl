@@ -1,1 +1,4 @@
+kafka_connect_sasl_kafka_connect_connect_secrets_volume:/etc/kafka-connect/secrets
+kafka_connect_sasl_kafka_connect_secrets_volume:/etc/kafka/secrets
+kafka_connect_sasl_kafka_connect_jars_volume:/etc/kafka-connect/jars
 
